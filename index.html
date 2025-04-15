@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+        
+    <title>Convert-Money</title>
+</head>
+<body>
+   
+
+    <main>
+        <label>
+            Converter <b>de:</b>    
+            <select id="from-currency">
+                <option value="real">R$ Real Brasileiro</option>
+                <option value="dolar">US$ Dólar Americano</option>
+                <option value="euro">€ Euro</option>
+                <option value="bitcoin">₿ Bitcoin</option>
+                <option value="franco">CHF Franco Suíço</option>
+                <option value="riyal">SAR Riyal Saudita</option>
+                <option value="rublo">₽ Rublo Russo</option>
+            </select>
+        </label>
+
+        <label>
+            Converter <b>para:</b>
+            <select id="to-currency" class="currency-select">
+                <option value="real">R$ Real Brasileiro</option>
+                <option value="dolar">US$ Dólar Americano</option>
+                <option value="euro">€ Euro</option>
+                <option value="bitcoin">₿ Bitcoin</option>
+                <option value="franco">CHF Franco Suíço</option>
+                <option value="riyal">SAR Riyal Saudita</option>
+                <option value="rublo">₽ Rublo Russo</option>
+            </select>
+        </label>
+
+        <label>
+           <b>Valor:</b> 
+            <input type="Digite o valor" class="input-currency" placeholder="10.000,00">
+        </label>
+
+        <button class="convert-button">Converter</button>
+
+        <section>
+            <div class="currency-box">
+                <img class="currency-img" src="./assets/real.jpg" alt="logo-moeda-a-converter">
+                <p class="currency" id="currency-name">Real</p>
+                <p class="currency-value-to-convert">R$ 0,0</p>
+            </div>  
+                
+            <img class="arrow-img" src="assets/seta.png" alt="seta">
+            
+            <div class="currency-box">
+                <img class="currency-img" id="currency-converted-img" src="./assets/dolar.jpg" alt="logo-moeda-a-convertida">
+                <p class="currency" id="currency-converted-name">Dólar</p>
+                <p class="currency-value">US$ 0,0</p>
+            </div>
+        </section>
+   
+        <!-- Div para armazenar as imagens das moedas -->
+        <div id="currency-images" style="display: none;">
+            <img id="real-img" src="./assets/real.jpg" alt="Real">
+            <img id="dolar-img" src="./assets/dolar.jpg" alt="Dólar">
+            <img id="euro-img" src="./assets/euro.jpg" alt="Euro">
+            <img id="bitcoin-img" src="./assets/bitcoin.jpg" alt="Bitcoin">
+            <img id="franco-img" src="./assets/franco-suico.jpg" alt="Franco Suíço">
+            <img id="riyal-img" src="./assets/riyal-saudita.jpg" alt="Riyal Saudita">
+            <img id="rublo-img" src="./assets/rublo.jpeg" alt="Rublo Russo">
+        </div>
+
+        <p id="cotacao-hora" style="font-size: 0.9rem; color: #666;"></p>
+
+
+    </main>
+    <div id="loading" class="spinner" style="display: none;"></div>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="./script.js"></script> 
+</body>
+</html>
